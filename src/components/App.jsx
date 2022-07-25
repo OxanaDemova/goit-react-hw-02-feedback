@@ -1,7 +1,8 @@
 import { Component } from "react";
 import { Container } from "./Container/Container";
 import { Section } from "./Section/Section";
-import { Button } from "./Button/Button";
+
+import { FeedbackOptions } from "./FeedbackOptions/FeedbackOptions";
 import { Statistics } from "./Statistics/Statistics";
 
 
@@ -13,30 +14,27 @@ export class App extends Component {
   }
 
 
-  handleGoodFeedback = () => {
+  handleFeedbackOptions = (e) => {
+    const btnTarget = e.target.textContent.toLowerCase();
     this.setState(prevState => ({
-      good: prevState.good + 1,
-    }));
-  };
-
-  handleNeutralFeedback = () => {
-    this.setState(prevState => ({
-      neutral: prevState.neutral + 1,
+      [btnTarget]: prevState[btnTarget] + 1,
     }))
   };
 
-  handleBadFeedback = () => {
-    this.setState(prevState => ({
-      bad: prevState.bad + 1,
-    }))
-  };
 
-  countTotalFeedback = ({ good, bad, neutral }) => {
+
+
+  countTotalFeedback()  {
     
-    const totalFeedback = good + bad + neutral;
+    return Object.values(this.state).reduce((total, item) => total + item, 0);
   
-    return totalFeedback;
+    
   };
+
+  countPositiveFeedbackPercentage() {
+    const { good, bad, neutral } = this.state;
+    return Math.ceil(good / (good + bad + neutral) * 100);
+  }
   
 
 
@@ -48,15 +46,18 @@ export class App extends Component {
       
       <Container>
         <Section title={'Please leave feedback'}>
-          <Button text={'Good'}  onIncrement={this.handleGoodFeedback}/>
-          <Button text={'Neutral'} onIncrement={this.handleNeutralFeedback}/>
-          <Button text={'Bad'} onIncrement={this.handleBadFeedback} />
+          <FeedbackOptions
+            options={['good', 'neutral', 'bad']}
+            onLeaveFeedback={this.handleFeedbackOptions}
+          />
+
           <Statistics
             title={'Statistics'}
             good={good}
             bad={bad}
             neutral={neutral}
-            total={this.countTotalFeedback}
+            total={this.countTotalFeedback()}
+            positive={this.countPositiveFeedbackPercentage()}
                
           />
         </Section>
