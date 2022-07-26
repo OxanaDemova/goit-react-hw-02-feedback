@@ -1,0 +1,26 @@
+.btnList {
+    display: flex;
+}
+
+.btnItem:not(:first-child) {
+    margin-left: 20px;
+}
+
+.btn {
+    min-width: 88px;
+    padding: 10px 20px;
+
+    border: none;
+    border-radius: 4px;
+    color: #010c0e;
+    background-color: #8fe4f5;
+    text-transform: capitalize;
+
+    cursor: pointer;
+  
+}
+
+.btn:hover{
+    background-color: #d7f5fb;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}

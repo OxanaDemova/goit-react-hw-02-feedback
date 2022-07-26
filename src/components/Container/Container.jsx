@@ -10,3 +10,7 @@ export const Container = ({ children }) => {
 Container.propTypes = {
     children: PropTypes.node.isRequired
 };
+
+Container.propTypes = {
+    children: PropTypes.node.isRequired
+}
