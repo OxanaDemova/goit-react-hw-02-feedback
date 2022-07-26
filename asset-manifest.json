@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/OxanaDemova/goit-react-hw-02-feedback/static/css/main.7acaea2f.css",
-    "main.js": "/OxanaDemova/goit-react-hw-02-feedback/static/js/main.07d3183d.js",
+    "main.css": "/OxanaDemova/goit-react-hw-02-feedback/static/css/main.a89621e8.css",
+    "main.js": "/OxanaDemova/goit-react-hw-02-feedback/static/js/main.a40bbfac.js",
     "index.html": "/OxanaDemova/goit-react-hw-02-feedback/index.html",
-    "main.7acaea2f.css.map": "/OxanaDemova/goit-react-hw-02-feedback/static/css/main.7acaea2f.css.map",
-    "main.07d3183d.js.map": "/OxanaDemova/goit-react-hw-02-feedback/static/js/main.07d3183d.js.map"
+    "main.a89621e8.css.map": "/OxanaDemova/goit-react-hw-02-feedback/static/css/main.a89621e8.css.map",
+    "main.a40bbfac.js.map": "/OxanaDemova/goit-react-hw-02-feedback/static/js/main.a40bbfac.js.map"
   },
   "entrypoints": [
-    "static/css/main.7acaea2f.css",
-    "static/js/main.07d3183d.js"
+    "static/css/main.a89621e8.css",
+    "static/js/main.a40bbfac.js"
   ]
 }
