@@ -1,4 +1,4 @@
-.item:not(:last-child){
+.item {
     margin-bottom: 10px;
 }
 
