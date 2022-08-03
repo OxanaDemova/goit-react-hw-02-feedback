@@ -4,7 +4,7 @@ import s from './Section.module.css'
 export const Section = ({ title, children }) => {
     return (
         <section className={s.feedbackSection}>
-            {title && <h1>{title}</h1>}
+            {title && <h2>{title}</h2>}
             {children}
         </section>
     );
